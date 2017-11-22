@@ -35,10 +35,12 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 var MongoStore = require('connect-mongo')(session);
 
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(process.env.PORT, function(){
 	console.log('Environment: ' + app.get('env'));
+	console.log('port = ', process.env.PORT);
 	// browserSync.init(null, {proxy: "localhost:3000", tunnel: true})
 });
+
 console.log("__dirname = ", __dirname);
 
 var opts = {
