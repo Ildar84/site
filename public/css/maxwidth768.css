@@ -1,0 +1,131 @@
+@media all and (max-width: 767px) {
+  .container {
+    width: 80%;
+    margin: 0 auto; }
+  header .logo img {
+    -webkit-transition: 1s;
+    transition: 1s;
+    height: 50px;
+    position: fixed;
+    top: -5px; }
+  button.tcon {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 3%;
+    z-index: 12000; }
+  .nav__menu-list {
+    display: none;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.4); }
+  .nav__menu-item {
+    display: block;
+    height: 10vh; }
+    .nav__menu-item a {
+      color: white;
+      line-height: 100%;
+      margin-bottom: 1%; }
+  .nav__menu-item-active {
+    -webkit-transition: 1s;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0px 1px 7px #646464;
+            box-shadow: 0px 1px 7px #646464; }
+  .nav__submenu-ind,
+  .nav__submenu-product {
+    position: fixed;
+    top: 8%;
+    right: 15%;
+    left: initial;
+    height: auto;
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 7px #646464;
+            box-shadow: 0px 1px 7px #646464; }
+    .nav__submenu-ind li,
+    .nav__submenu-product li {
+      float: none;
+      padding: 0;
+      margin-bottom: 10px; }
+    .nav__submenu-ind figcaption,
+    .nav__submenu-product figcaption {
+      font-size: 12px; }
+  .nav__submenu-ind {
+    background-color: #f0f0f0; }
+  .slider {
+    top: 0px;
+    height: 100vh; }
+  .anim-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: initial; }
+    .anim-slider .content-wrapper {
+      padding: 0px 5%;
+      margin: 0 auto; }
+  .anim-slide {
+    height: 100vh; }
+  .anim-dots {
+    bottom: 0; }
+  .content-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 250, 250, 0.7); }
+    .content-wrapper h1 {
+      color: #454545;
+      font-size: 5vh; }
+    .content-wrapper p {
+      font-size: 18px; }
+    .content-wrapper img {
+      margin: 0;
+      width: 90px; }
+    .content-wrapper figcaption {
+      font-size: 20px; }
+    .content-wrapper .btn {
+      margin-top: 40px;
+      background-color: #ececec; }
+  #slider1 h1 {
+    margin-top: 25vh; }
+  #slider2 figure {
+    margin-top: 6vh; }
+  #slider2 button {
+    margin-top: 8vh; }
+  #slider3 h1 {
+    margin-top: 25vh; }
+  #slider3 button {
+    margin-top: 3vh;
+    margin-bottom: 0; }
+  #slider4 figure {
+    margin-top: 15vh;
+    margin-bottom: 0vh; }
+  #slider4 h1 {
+    margin-bottom: 5vh; }
+  #slider4 button {
+    margin-top: 5vh; }
+  .anim-slide {
+    background-position: right 0; }
+  .anim-arrows {
+    display: none; }
+  .footer__logo-list {
+    text-align: center; }
+    .footer__logo-list .separator {
+      display: block;
+      margin: 50px auto;
+      width: 50%;
+      height: 1px;
+      background-color: #888; }
+  .footer__menu-list {
+    text-align: center;
+    margin-top: 30px; }
+  .purchase p, .purchase h3 {
+    text-align: center; }
+  .purchase .btn {
+    margin: 15px auto;
+    display: block; }
+  .product-resins .pruduct__image {
+    text-align: center; } }

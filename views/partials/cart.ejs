@@ -1,0 +1,30 @@
+<script id="entry-template" type="text/x-handlebars-template">
+  <div class="cart animated fadeInRight">
+    {{#if empty}}
+      <div class="row">В корзине нет товаров</div>
+    {{else}}
+      {{#each items}}
+          <div class="row cart__item">
+            <div class="col-md-5 col-xs-12">{{item}}</div>
+            <div class="col-md-3 col-xs-12">
+              <input type="number" value="{{qty}}" min="1" max="99">
+              <span>шт</span>
+            </div>
+            <div class="col-md-2 col-xs-12">{{price}}<span>$</span></div>
+            <div class="col-md-2 col-xs-12">
+              <button class="product-delete" data-id="{{@key}}"><span class="fa fa-minus-square"></span></button>
+            </div>
+          </div>
+          <hr>
+      {{/each}}
+
+      <div class="row cart__footer">
+          <div class="col-md-6"><p>Сумма:</strong><span id="cart__totalPrice">{{ totalPrice }}</span>$</p></div>
+          <div class="col-md-2"><button class="cart-refresh"><span class="fa fa-refresh"></span></button></div>
+          <div class="col-md-2"><button class="send-order"><span class="fa fa-pencil-square-o"></span></button></div>
+          <div class="col-md-2"><button class="cart-clear"><span class="fa fa-trash-o"></span></button></div>
+      </div>
+    {{/if}}
+  </div>
+</script>
+

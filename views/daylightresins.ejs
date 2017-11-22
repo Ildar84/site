@@ -1,0 +1,13 @@
+<% layout('layout/page.ejs') -%>
+
+<% include partials/headernav %>
+<% include partials/preloader %>
+<% include partials/bottlesDL/sliderDL %>
+
+<section class="product product-resins">
+  <% include partials/bottlesDL/section%>
+</section>
+
+<% include partials/footer %>
+
+<% block('add').append('<script src="js/bottlesPage.js"></script>') %>
