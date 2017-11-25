@@ -689,13 +689,13 @@ footer {
 .product-resins .container {
   margin-bottom: 50px; }
 
-.product-resins .product__image img {
+.product-resins .product__caption {
+  font-size: 24px; }
+
+.product__image img {
   max-width: none;
   width: auto;
   float: none; }
-
-.product-resins .product__caption {
-  font-size: 24px; }
 
 .specifications-wrapper .caption, .specifications-wrapper .content-wrapper h1, .content-wrapper .specifications-wrapper h1, .specifications-wrapper .concept__caption, .specifications-wrapper .products figcaption, .products .specifications-wrapper figcaption, .specifications-wrapper .daypolymer h1, .daypolymer .specifications-wrapper h1, .specifications-wrapper .uvpolymer h1, .uvpolymer .specifications-wrapper h1, .specifications-wrapper .product__article h2, .product__article .specifications-wrapper h2, .specifications-wrapper .product h1, .product .specifications-wrapper h1, .specifications-wrapper .product h3, .product .specifications-wrapper h3, .specifications-wrapper .comparison caption, .comparison .specifications-wrapper caption {
   margin: 20px 0; }
@@ -776,6 +776,11 @@ footer {
       color: white;
       line-height: 100%;
       margin-bottom: 1%; }
+    .nav__menu-item .fa-shopping-bag {
+      position: absolute;
+      top: 10%;
+      right: 5.5%;
+      color: white; }
   .nav__menu-item-active {
     -webkit-transition: 1s;
     transition: 1s;
@@ -785,13 +790,13 @@ footer {
   .nav__submenu-ind,
   .nav__submenu-product {
     position: fixed;
-    top: 8%;
-    right: 15%;
+    top: 0;
+    right: 0;
     left: initial;
-    height: auto;
+    height: 100%;
     padding: 10px;
+    padding-right: 15%;
     width: auto;
-    border-radius: 10px;
     -webkit-box-shadow: 0px 1px 7px #646464;
             box-shadow: 0px 1px 7px #646464; }
     .nav__submenu-ind li,
@@ -802,6 +807,9 @@ footer {
     .nav__submenu-ind figcaption,
     .nav__submenu-product figcaption {
       font-size: 12px; }
+    .nav__submenu-ind img,
+    .nav__submenu-product img {
+      height: 8vh; }
   .nav__submenu-ind {
     background-color: #f0f0f0; }
   .slider {
@@ -809,11 +817,12 @@ footer {
     height: 100vh; }
   .anim-slider {
     position: relative;
+    background-position: right;
     width: 100%;
     height: 100vh;
     min-height: initial; }
     .anim-slider .content-wrapper {
-      padding: 0px 5%;
+      padding: 11vh 5%;
       margin: 0 auto; }
   .anim-slide {
     height: 100vh; }
@@ -822,10 +831,12 @@ footer {
   .content-wrapper {
     width: 100%;
     height: 100%;
-    background-color: rgba(250, 250, 250, 0.7); }
+    background-color: rgba(150, 150, 150, 0.7);
+    color: white; }
     .content-wrapper h1 {
-      color: #454545;
-      font-size: 5vh; }
+      font-size: 5vh;
+      margin-top: 0px;
+      color: inherit; }
     .content-wrapper p {
       font-size: 18px; }
     .content-wrapper img {
@@ -835,20 +846,14 @@ footer {
       font-size: 20px; }
     .content-wrapper .btn {
       margin-top: 40px;
-      background-color: #ececec; }
-  #slider1 h1 {
-    margin-top: 25vh; }
-  #slider2 figure {
-    margin-top: 6vh; }
+      background-color: #ececec;
+      color: black; }
   #slider2 button {
     margin-top: 8vh; }
-  #slider3 h1 {
-    margin-top: 25vh; }
   #slider3 button {
     margin-top: 3vh;
     margin-bottom: 0; }
   #slider4 figure {
-    margin-top: 15vh;
     margin-bottom: 0vh; }
   #slider4 h1 {
     margin-bottom: 5vh; }
@@ -874,10 +879,25 @@ footer {
   .purchase .btn {
     margin: 15px auto;
     display: block; }
-  .product-resins .pruduct__image {
-    text-align: center; } }
+  .product__image {
+    padding: 40px 0; }
+    .product__image img {
+      display: block;
+      margin: 0 auto;
+      width: 80%; }
+  .product h1 {
+    padding: 0; }
+  .cart {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 20000;
+    padding: 3px; } }
 
 @media all and (max-width: 991px) {
+  .nav__menu-list {
+    float: none;
+    right: 0; }
   .nav__menu-item {
     padding: 40px 20px; }
     .nav__menu-item a {
@@ -890,28 +910,16 @@ footer {
     display: block; }
   .logo img {
     height: 80px; }
-  #slider1 h1 {
-    margin-top: 25vh; }
   #slider2 figure {
     margin-top: 5vh; }
   #slider2 button {
     margin-top: 8vh; }
-  #slider3 h1 {
-    margin-top: 25vh; }
   #slider3 button {
     margin-top: 3vh;
     margin-bottom: 0; }
-  #slider4 figure {
-    margin-top: 15vh;
-    margin-bottom: 0vh; }
-  #slider4 h1 {
-    margin-bottom: 5vh; }
-  #slider4 button {
-    margin-top: 5vh; }
   .content-wrapper {
     margin: 5% auto; }
     .content-wrapper h1 {
-      color: #454545;
       font-size: 5vh; }
     .content-wrapper p {
       font-size: 18px; }
@@ -922,7 +930,8 @@ footer {
       font-size: 20px; }
     .content-wrapper .btn {
       margin-top: 40px;
-      background-color: #ececec; }
+      background-color: #ececec;
+      color: black; }
   .product__adventages h3 {
     padding: 10px 0; }
   .product__adventages img {

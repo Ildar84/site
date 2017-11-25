@@ -19,7 +19,10 @@ emailjs.init("user_XkcTd5cwRkg153yV9e18g");
 var Printer = require('./model/products.js');
 var Bottle = require('./model/bottles.js');
 var Cart = require('./model/cart.js');
+
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
+console.log(app.get('env') == "development");
+app.get('env') == "development"? app.set('port', config.get("port")): app.set('port', process.env.PORT);
 app.set('port', config.get("port"));
 
 app.use(express.static('public'));
@@ -35,10 +38,9 @@ app.use(require('body-parser').urlencoded({ extended: true }));
 var MongoStore = require('connect-mongo')(session);
 
 
-http.createServer(app).listen(process.env.PORT, function(){
+http.createServer(app).listen(app.get('port'), function(){
 	console.log('Environment: ' + app.get('env'));
 	console.log('port = ', process.env.PORT);
-	// browserSync.init(null, {proxy: "localhost:3000", tunnel: true})
 });
 
 console.log("__dirname = ", __dirname);
@@ -56,12 +58,6 @@ mongoose.Promise = global.Promise
 mongoose.connect(credentials.mongo.development.connectionString, opts);
 
 var db = mongoose.connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-
-db.once('open', function callback () {
-	console.log('The Data base connected succesfuly!!!')
-});
 
 
 app.use(session({

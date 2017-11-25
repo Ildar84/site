@@ -1,4 +1,7 @@
 @media all and (max-width: 991px) {
+  .nav__menu-list {
+    float: none;
+    right: 0; }
   .nav__menu-item {
     padding: 40px 20px; }
     .nav__menu-item a {
@@ -11,28 +14,16 @@
     display: block; }
   .logo img {
     height: 80px; }
-  #slider1 h1 {
-    margin-top: 25vh; }
   #slider2 figure {
     margin-top: 5vh; }
   #slider2 button {
     margin-top: 8vh; }
-  #slider3 h1 {
-    margin-top: 25vh; }
   #slider3 button {
     margin-top: 3vh;
     margin-bottom: 0; }
-  #slider4 figure {
-    margin-top: 15vh;
-    margin-bottom: 0vh; }
-  #slider4 h1 {
-    margin-bottom: 5vh; }
-  #slider4 button {
-    margin-top: 5vh; }
   .content-wrapper {
     margin: 5% auto; }
     .content-wrapper h1 {
-      color: #454545;
       font-size: 5vh; }
     .content-wrapper p {
       font-size: 18px; }
@@ -43,7 +34,8 @@
       font-size: 20px; }
     .content-wrapper .btn {
       margin-top: 40px;
-      background-color: #ececec; }
+      background-color: #ececec;
+      color: black; }
   .product__adventages h3 {
     padding: 10px 0; }
   .product__adventages img {
