@@ -9,6 +9,7 @@ var errorHandler = require('errorhandler');
 const browserSync = require('browser-sync');
 var credentials = require('./credentials.js');
 var session = require('express-session');
+const favicon = require('express-favicon');
 var mongoose = require('mongoose');
 
 var emailjs = require('emailjs-com');
@@ -19,8 +20,11 @@ var Printer = require('./model/products.js');
 var Bottle = require('./model/bottles.js');
 var Cart = require('./model/cart.js');
 
+app.use(favicon(__dirname + '/public/img/favicon.ico'));
+console.log(app.get('env') == "development");
 app.get('env') == "development"? app.set('port', config.get("port")): app.set('port', process.env.PORT);
 app.set('port', config.get("port"));
+console.log("app.get("port") = ",app.get('port'));
 
 app.use(express.static('public'));
 app.use('/products', express.static('public'));
@@ -69,6 +73,7 @@ app.use(session({
 	unset: 'destroy',
 	cookie: { maxAge: 2 * 60 * 1000  }
 }));
+
 
 app.get('/', function(req,res,next){
 	Printer.find(function(err, printers){
