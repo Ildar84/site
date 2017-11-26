@@ -22,7 +22,11 @@ var Cart = require('./model/cart.js');
 
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
 console.log(app.get('env') == "development");
-app.get('env') == "development"? app.set('port', config.get("port")): app.set('port', process.env.PORT);
+if(app.get('env') == "development") {
+	app.set('port', config.get("port"))
+} else {
+	app.set('port', process.env.PORT);
+};
 app.set('port', config.get("port"));
 console.log("app.get(port) = ",app.get('port'));
 
