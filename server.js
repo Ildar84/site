@@ -73,11 +73,6 @@ app.use(session({
 	cookie: { maxAge: 2 * 60 * 1000  }
 }));
 
-
-app.use(function(req,res,next){
-	next();
-});
-
 app.get('/', function(req,res,next){
 	Printer.find(function(err, printers){
 		if(err) next(err);
