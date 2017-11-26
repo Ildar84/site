@@ -19,15 +19,16 @@ emailjs.init("user_XkcTd5cwRkg153yV9e18g");
 var Printer = require('./model/products.js');
 var Bottle = require('./model/bottles.js');
 var Cart = require('./model/cart.js');
-
+app.set('env', "production");
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
+
 console.log(app.get('env') == "development");
+
 if(app.get('env') == "development") {
 	app.set('port', config.get("port"))
 } else {
 	app.set('port', process.env.PORT);
 };
-app.set('port', config.get("port"));
 console.log("app.get(port) = ",app.get('port'));
 
 app.use(express.static('public'));
