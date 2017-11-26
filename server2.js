@@ -9,6 +9,7 @@ var errorHandler = require('errorhandler');
 const browserSync = require('browser-sync');
 var credentials = require('./credentials.js');
 var session = require('express-session');
+
 var mongoose = require('mongoose');
 
 var emailjs = require('emailjs-com');
@@ -19,7 +20,6 @@ var Printer = require('./model/products.js');
 var Bottle = require('./model/bottles.js');
 var Cart = require('./model/cart.js');
 
-app.get('env') == "development"? app.set('port', config.get("port")): app.set('port', process.env.PORT);
 app.set('port', config.get("port"));
 
 app.use(express.static('public'));
@@ -37,9 +37,8 @@ var MongoStore = require('connect-mongo')(session);
 
 http.createServer(app).listen(app.get('port'), function(){
 	console.log('Environment: ' + app.get('env'));
-	console.log('port = ', process.env.PORT);
+	// browserSync.init(null, {proxy: "localhost:3000", tunnel: true})
 });
-
 console.log("__dirname = ", __dirname);
 
 var opts = {
@@ -56,10 +55,12 @@ mongoose.connect(credentials.mongo.development.connectionString, opts);
 
 var db = mongoose.connection;
 
-db.on('error', function(err){
-	console.log('Error connection mongo: ', err);
-	next(err);
+db.on('error', console.error.bind(console, 'connection error:'));
+
+db.once('open', function callback () {
+	console.log('The Data base connected succesfuly!!!')
 });
+
 
 app.use(session({
 	resave: false,
@@ -69,6 +70,11 @@ app.use(session({
 	unset: 'destroy',
 	cookie: { maxAge: 2 * 60 * 1000  }
 }));
+
+
+app.use(function(req,res,next){
+	next();
+});
 
 app.get('/', function(req,res,next){
 	Printer.find(function(err, printers){
@@ -195,9 +201,3 @@ app.post('/send-order/', function(req,res,next){
 })
 
 app.use(errorHandler());
-
-// mongoose.connection.close(function (err) {
-//     if(err) throw err;
-// });
-
-
