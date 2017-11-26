@@ -59,6 +59,10 @@ mongoose.connect(credentials.mongo.development.connectionString, opts);
 
 var db = mongoose.connection;
 
+db.on('error', function(err){
+	console.log('Error connection mongo: ', err);
+	next(err);
+});
 
 app.use(session({
 	resave: false,
