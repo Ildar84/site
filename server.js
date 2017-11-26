@@ -24,7 +24,7 @@ app.use(favicon(__dirname + '/public/img/favicon.ico'));
 console.log(app.get('env') == "development");
 app.get('env') == "development"? app.set('port', config.get("port")): app.set('port', process.env.PORT);
 app.set('port', config.get("port"));
-console.log("app.get("port") = ",app.get('port'));
+console.log("app.get(port) = ",app.get('port'));
 
 app.use(express.static('public'));
 app.use('/products', express.static('public'));
