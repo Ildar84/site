@@ -19,7 +19,6 @@ emailjs.init("user_XkcTd5cwRkg153yV9e18g");
 var Printer = require('./model/products.js');
 var Bottle = require('./model/bottles.js');
 var Cart = require('./model/cart.js');
-app.set('env', "production");
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
 
 console.log(app.get('env') == "development");
