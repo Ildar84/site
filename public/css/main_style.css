@@ -199,7 +199,7 @@ table {
   right: 0;
   bottom: 0;
   background: #f7f7f7;
-  z-index: 11110; }
+  z-index: 7996; }
 
 #page-preloader .spinner {
   width: 40px;
@@ -224,7 +224,7 @@ figcaption {
 
 .logo {
   position: fixed;
-  z-index: 11111;
+  z-index: 7998;
   left: 10%; }
   .logo img {
     -webkit-transition: 800ms;
@@ -241,9 +241,9 @@ button.tcon {
 
 header {
   position: fixed;
-  z-index: 9999;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
+  z-index: 8002;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   top: 0;
   width: 100%; }
 
@@ -363,6 +363,7 @@ header {
 
 .anim-slider_single-slide {
   background-attachment: fixed;
+  background-attachment: local;
   background-repeat: no-repeat;
   background-size: cover; }
 
@@ -391,6 +392,9 @@ header {
     position: relative;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.7); }
+  .content-wrapper a {
+    position: relative;
+    display: block; }
   .content-wrapper .slide__description {
     font-size: 20px; }
   .content-wrapper .slide__liqcr-logo {
@@ -763,12 +767,20 @@ footer {
   .container {
     width: 80%;
     margin: 0 auto; }
-  header .logo img {
-    -webkit-transition: 1s;
-    transition: 1s;
-    height: 50px;
-    position: fixed;
-    top: -5px; }
+  header {
+    z-index: 4000; }
+    header .logo {
+      z-index: 9000; }
+      header .logo img {
+        -webkit-transition: 1s;
+        transition: 1s;
+        height: 50px;
+        position: fixed;
+        top: -5px; }
+  nav .mobile-visible-menu {
+    display: block !important;
+    -webkit-animation-duration: 300ms;
+            animation-duration: 300ms; }
   button.tcon {
     display: block;
     position: fixed;
@@ -776,13 +788,15 @@ footer {
     right: 3%;
     z-index: 12000; }
   .nav__menu-list {
-    display: none;
+    opacity: 0;
     padding: 0;
     position: fixed;
     top: 0;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.4); }
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-animation-duration: 300ms;
+            animation-duration: 300ms; }
   .nav__menu-item {
     display: block;
     height: 10vh; }
@@ -794,7 +808,8 @@ footer {
       position: fixed;
       bottom: 11%;
       right: 5%;
-      font-size: 30px; }
+      font-size: 30px;
+      color: #eca014; }
   .nav__menu-item-active {
     -webkit-transition: 1s;
     transition: 1s;
@@ -858,7 +873,8 @@ footer {
       margin: 0;
       width: 90px; }
     .content-wrapper figcaption {
-      font-size: 20px; }
+      font-size: 20px;
+      color: inherit; }
     .content-wrapper .btn {
       margin-top: 40px;
       background-color: #ececec;
@@ -909,7 +925,7 @@ footer {
   .product-resins .product__image img {
     float: none;
     max-width: 120px; }
-  .products__wrapper {
+  .products__wrapper img {
     opacity: 1; }
   .product h1 {
     padding: 0; }
@@ -921,7 +937,7 @@ footer {
     padding: 3px; }
     .cart .fa-minus-square {
       font-size: 30px;
-      color: #818181; } }
+      color: #eca014; } }
 
 @media all and (max-width: 991px) {
   .nav__menu-list {
