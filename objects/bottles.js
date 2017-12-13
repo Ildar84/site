@@ -88,7 +88,7 @@ module.exports = [
 		name: "daylight castable resin",
 		properties: {hardness: 5, flexibility: 0},
 		description: "Castable daylight resin is specially formulated to provide high definition moulds. It will leave almost no ash when burnt and create gas evenly as the temperature is increased, avoiding any pressure build up within the casting. It will capture all the details with a very dry surface to provide the ideal finish to your investment mould.",
-		mainImage: "CastableDaylightAmberLabel-200x380.png",
+		mainImage: "Generic_Daylight_castable.png",
 		logoImage: "spr-castable",
 		colors: ["gray"],
 		note: "Совместим только с Liquid Crystal принтерами. Не совместим с DLP и Laser принтерами.",

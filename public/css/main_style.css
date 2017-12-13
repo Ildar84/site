@@ -703,7 +703,7 @@ footer {
   font-size: 24px; }
 
 .product__image img {
-  max-width: none;
+  max-width: 230px;
   width: auto; }
 
 .specifications-wrapper .caption, .specifications-wrapper .content-wrapper h1, .content-wrapper .specifications-wrapper h1, .specifications-wrapper .concept__caption, .specifications-wrapper .products figcaption, .products .specifications-wrapper figcaption, .specifications-wrapper .daypolymer h1, .daypolymer .specifications-wrapper h1, .specifications-wrapper .uvpolymer h1, .uvpolymer .specifications-wrapper h1, .specifications-wrapper .product__article h2, .product__article .specifications-wrapper h2, .specifications-wrapper .product h1, .product .specifications-wrapper h1, .specifications-wrapper .product h3, .product .specifications-wrapper h3, .specifications-wrapper .comparison caption, .comparison .specifications-wrapper caption {
