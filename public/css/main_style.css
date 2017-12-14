@@ -525,9 +525,6 @@ header {
   font-weight: lighter;
   text-transform: uppercase; }
 
-.daypolymer__description img {
-  margin: 10px 0; }
-
 .daypolymer__description .btn {
   display: block;
   margin: 40px auto; }
@@ -546,7 +543,9 @@ header {
   width: 54px;
   height: 54px; }
   .sprite-window img {
-    position: relative; }
+    position: relative;
+    margin: 0;
+    padding: 0; }
 
 .daypolymer__image img {
   display: block;
@@ -794,22 +793,21 @@ footer {
     top: 0;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
     -webkit-animation-duration: 300ms;
             animation-duration: 300ms; }
   .nav__menu-item {
     display: block;
-    height: 10vh; }
+    height: 15vh;
+    padding: 5vh 0; }
     .nav__menu-item a {
       color: white;
-      line-height: 100%;
-      margin-bottom: 1%; }
+      line-height: normal;
+      margin-left: 5%; }
     .nav__menu-item .fa-shopping-bag {
-      position: fixed;
-      bottom: 11%;
-      right: 5%;
       font-size: 30px;
-      color: #eca014; }
+      color: #eca014;
+      margin-left: 5%; }
   .nav__menu-item-active {
     -webkit-transition: 1s;
     transition: 1s;
@@ -943,10 +941,8 @@ footer {
   .nav__menu-list {
     float: none;
     right: 0; }
-  .nav__menu-item {
-    padding: 40px 20px; }
-    .nav__menu-item a {
-      font-size: 14px; }
+  .nav__menu-item a {
+    font-size: 14px; }
   .nav__submenu-product figcaption,
   .nav__submenu-ind figcaption {
     font-size: 10px; }
