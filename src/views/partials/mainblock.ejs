@@ -1,0 +1,135 @@
+
+        <section class="concept">
+        	<h1 class="caption concept__caption">THE NEXT GENERATION OF 3D PRINTING IS HERE</h1>
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-6">
+        				<div class="concept__image-wrapper js-emergeByQueue">
+        					<img class="concept__image" src="img/FSV-LCHR_3.png" alt="Liquid Crystal image">
+        					<img class="concept__image concept__image-small" src="img/Galeonwithcoin.png" alt="galeonimage">
+        				</div>
+        			</div>
+
+        			<div class="col-sm-6">
+        				<article class="concept__article">
+        					<h2 class="caption concept__article-caption">the concept</h2>
+        					<hr>
+        					<p class="text">The concept is simple – instead of using a laser or a projector to cure the polymer, we use unmodified LCD screens and our specially formulated Daylight polymer. All other 3D printers that polymerise resin use a combination of both daylight and UV light at considerably higher intensities. Photocentric has been able to make this work by developing the world’s most sensitive daylight resins. Utilising mass produced screens designed for use in mobiles, handheld devices enable us to use the highest resolution screens, offering phenomenal value for money, which we can then pass onto our customers. The opportunities are limitless; higher and higher resolution screens becoming available in all formats from mobiles to large format televisions provide the lowest cost imaging systems ever imagined.</p>
+        				</article>
+
+        				<figure>
+        					<figcaption class="caption-small concept__article-caption">DAYLIGHT POLYMER PRINTING (D.P.P)</figcaption>
+        					<img class="concept__article-img"src="img/LCDscheme-2.png" alt="LCDscheme">
+        				</figure>
+        				<figure>
+        					<figcaption class="caption-small concept__article-caption">UV & LASER COMPATIBLE RESIN PRINTING (S.L.A. & D.L.P.)</figcaption>
+        					<img class="concept__article-img"src="img/ProyectorLaserScheme-2.png" alt="LCDscheme">
+        				</figure>
+        			</div>
+        		</div>
+
+        		<div class="row products js-emergeByQueue">
+        			<div class="products__wrapper col-sm-12 col-md-4">
+        				<figure>
+        					<img class="products__img animated fadeOut" src="img/LC10.png" alt="liquidCrystal10">
+        					<figcaption class="products__caption caption-small">LIQUID CRYSTAL 10″</figcaption>
+        				</figure>
+        				<div class="separator"></div>
+        				<p>Build platform 200 x 100 x 200 mm
+        7.9 x 3.9 x 7.9 inches</p>
+        				<button class="btn products__btn">Узнать больше</button>
+        			</div>
+        			<div class="products__wrapper col-sm-12 col-md-4">
+        				<figure>
+        					<img class="products__img animated fadeOut" src="img/LCHR.png" alt="liquidCrystal10">
+        					<figcaption class="products__caption caption-small">LIQUID CRYSTAL 10″</figcaption>
+        				</figure>
+        				<div class="separator"></div>
+        				<p>Build platform 200 x 100 x 200 mm
+        7.9 x 3.9 x 7.9 inches</p>
+        				<button class="btn products__btn">Узнать больше</button>
+        			</div>
+        			<div class="products__wrapper col-sm-12 col-md-4">
+        				<figure>
+        					<img class="products__img animated fadeOut" src="img/LCPRO2017.png" alt="liquidCrystal10">
+        					<figcaption class="products__caption caption-small">LIQUID CRYSTAL 10″</figcaption>
+        				</figure>
+        				<div class="separator"></div>
+        				<p>Build platform 200 x 100 x 200 mm
+        7.9 x 3.9 x 7.9 inches</p>
+        				<button class="btn products__btn">Узнать больше</button>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+
+        <section class="products bottles__dl">
+        	<div class="container">
+        		<img class="daypolymer__logo" src="img/imagepac3Dlogo.png" alt="imagepac3Dlogo">
+        		<h2 class="caption bottles__caption">specialists in 3d polymer resins</h2>
+        		<div class="row">
+        		<div class="bottles__description col-md-6">
+        			<h3 class="caption">daylight resins</h3>
+
+              <ul class="properties row">
+                <%
+                let sprites = ['castable','flexible','firm','hard'];
+                for(var i=0; i<sprites.length; i++) {%>
+                  <li class="properties__item col-xs-2">
+
+                    <div class=" sprite-window">
+                      <img class="spr spr-<%= sprites[i]%>" src="img/materialProp.png" alt="properties">
+                    </div>
+
+                    <span class="text properties__name"><%= sprites[i]%></span>
+
+                  </li>
+
+                  <% } %>
+                </ul>
+
+        			<h3>Colors</h3>
+
+        			<img src="img/colorsMainDaylight.png" alt="colorslist">
+        			<p class="footnote">* All colours are not available in every type</p>
+        			<a href="/products/daylightresins"class="btn products__btn">Узнать больше</a>
+        		</div>
+        		<div class="col-md-6">
+        			<img class="bottles__image" src="img/3-Resin-Bottles.png" alt="resinBottles">
+        		</div>
+        	</div>
+        	</div>
+        </section>
+
+        <section class="products bottles__uv">
+
+        	<div class="container">
+        		<div class="row">
+        		<div class="bottles__description col-md-6">
+        			<h2 class="caption">uv&laser compatible resins</h2>
+              <ul class="properties row">
+                <%
+                for(var i=0; i<sprites.length; i++) {%>
+                  <li class="properties__item col-xs-2">
+
+                    <div class=" sprite-window">
+                      <img class="spr spr-<%= sprites[i]%>" src="img/materialProp.png" alt="properties">
+                    </div>
+
+                    <span class="text properties__name"><%= sprites[i]%></span>
+
+                  </li>
+                  <% } %>
+                </ul>
+
+        			<h3>Colors</h3>
+        			<img class="daypolymer__colors" src="img/colorsMainDaylight.png" alt="colorslist">
+        			<p class="footnote">* Не всi кольори доступнi</p>
+        			<a href="/products/uvresins" class="btn products__btn">Узнать больше</a>
+        		</div>
+        		<div class="col-md-6">
+        			<img class="bottles__image" src="img/UVBottles.png" alt="resinBottles">
+        		</div>
+        	</div>
+        	</div>
+        </section>

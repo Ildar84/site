@@ -1,0 +1,199 @@
+
+// hide desktop elements
+.nav--scroll
+	display: none
+// show mobile elements
+.nav--mob
+	display: block
+	z-index: 4000
+	.logo
+		position: fixed
+		top: 0
+		left: 3%
+		z-index: 9000
+		img
+			transition: 1s
+			height: 50px
+.unscrolled
+	overflow: hidden
+
+.nav__menu-list--mob
+	display: block
+	background-color: rgba(0,0,0,0.8)
+	animation-duration: 300ms
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 12000
+.nav__menu-item
+	display: block
+	height: 15vh
+	// clear padding
+	padding: 0
+	padding-left: 5%
+	a
+		color: white
+		.fa-shopping-bag
+			font-size: 30px
+			color: #eca014
+			margin-left: 5%
+
+button.tcon-menu--xbutterfly
+	display: block
+	position: fixed
+	top: 0
+	right: 3%
+	z-index: 21001
+
+// nav
+// 	animation-duration: 300ms
+
+.nav__submenu
+	position: fixed
+	top: 0
+	right: 0
+	left: initial
+	height: 100%
+	padding: 10px
+	padding-right: 15%
+	width: auto
+	box-shadow: 0px 1px 7px rgba(100,100,100,1.0)
+	z-index: 12000
+
+.nav__submenu-item
+	float: none
+	padding: 0
+	margin-bottom: 10px
+
+.nav__submenu-caption
+	font-size: 12px
+	text-align: center
+
+.nav__submenu-image
+	height: 8vh
+
+.nav__menu-item-active
+	transition: 1s
+	background-color: rgba(0,0,0,0.8)
+	box-shadow: 0px 1px 7px rgba(100,100,100,1.0)
+
+.slide__bg
+	background-position: right
+// .anim-slide__content-caption,
+// .anim-slide__content-figcaption,
+// .anim-slide__content-text
+// 	color: $text-color-white
+// 	text-shadow: 0 0 30px black
+
+.header-image
+	position: relative
+	background-position: right !important
+	width: 100%
+	height: 100vh
+	min-height: initial
+
+
+.header-image__content-box
+	position: relative
+	top: 50%
+	left: 0
+	display: block
+	height: auto
+	margin: 0 auto
+	max-width: 300px
+	width: 60%
+.anim-slide__content-img
+
+.header-image__btn
+	margin: 20px auto 0
+
+.anim-dots
+	bottom: 0
+
+.anim-arrows
+	display: none
+
+.footer__logo
+	text-align: center
+
+.social-links
+	float: none
+.social-links__item
+	padding: 0
+	margin: 0
+	text-align: center
+
+// product styles for pad and mobile
+.purchase
+	text-align: center
+	.btn
+		margin: 15px auto
+		display: block
+
+.table
+	td
+		text-align: center
+.product__btn
+		margin: auto
+
+.fa-shopping-bag
+	position: fixed
+	top: 8px
+	right: 90px
+
+.cart
+	background-color: rgba(0,0,0,0.8)
+	color: white
+	display: block
+	padding: 30px
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+
+.cart-wrapper
+	z-index: 20000
+	position: fixed
+	height: 100vh
+	width: 100%
+	top: 0
+
+.fa-times-circle:active
+	color: gray
+
+.hint
+	display: block
+	position: absolute
+	bottom: -20px
+	left: -35px
+	font-size: 8px
+	top: unset
+	background-color: transparent
+	box-shadow: none
+
+.fa-times-circle+.hint
+	display: none
+
+.order
+	top: 0
+	left: 0
+	margin: 0
+	width: 100%
+	height: 100%
+
+.send-order
+	position: absolute
+	right: 20px
+	bottom: -17px
+
+.cart-clear
+	position: absolute
+	right: 60px
+	bottom: -17px
+
+.cart-refresh
+	position: absolute
+	bottom: 0
+	left: 150px

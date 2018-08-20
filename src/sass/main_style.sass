@@ -1,0 +1,311 @@
+@import reset
+$text-color: #818181
+$caption-color:	rgba(0,0,0,0.6)
+$footerbackcolor: #262626
+$footer-txt-color: #7d7d7d
+$text-color-white: white
+$white-text-shadow: 0 0 10px #676767
+
+@import conceptblock
+
+#page-preloader
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: #f7f7f7
+    z-index: 7996
+
+#page-preloader .spinner
+    width: 40px
+    height: 40px
+    position: absolute
+    left: 50%
+    top: 50%
+    border-radius: 50%
+    background-color: white
+    margin: -16px 0 0 -16px
+    box-shadow: 0 5px 10px #e4e4e4
+
+.caption
+	text-transform: uppercase
+	font-size: 24px
+	color: $caption-color
+.caption-small
+  font-size: 18px
+  text-transform: uppercase
+  color: $caption-color
+.m10
+  margin: 10px 0
+.m20
+  margin: 20px 0
+.strong
+  font-weight: bold
+.text
+  font-size: 16px
+  font-weight: lighter
+  color: $text-color
+  line-height: 1.8em
+.text-small
+  color: $text-color
+  font-size: 14px
+
+.nolink
+	pointer-events: none
+.btn
+  display: block
+  box-shadow: 0px 2px 4px #929292
+  background-color: #ececec
+  color: $text-color
+  text-align: center
+  outline: none
+  border: none
+  border-radius: 6px
+  line-height: 42px
+  cursor: pointer
+
+.logo
+  float: left
+  z-index: 7998
+  img
+    margin-top: 2%
+    height: 100px
+
+button.tcon
+	.tcon-menu__lines,
+	.tcon-menu__lines::before,
+	.tcon-menu__lines::after,
+			background: #888
+// products main image
+.header-image:before
+  content: ''
+  display: block
+  width: 100%
+  height: 0.001px
+
+.header-image
+  height: 100vh
+  width: 100%
+  background-size: cover
+  background-position: center
+  // background: transparent
+
+// .header-image__lqHr
+//   background-image: url(../img/slider_hr.jpg)
+// .header-image__lq10
+//   background: transparent
+//   min-height: 400px
+//   // background-image: url(../img/slider_turbine.jpg)
+// .header-image__pro
+//   background-image: url(../img/slider_pro.jpg)
+// .header-image__uv
+//   background-image: url(../img/slider_uv.jpg)
+// .header-image__dl
+//   background-image: url(../img/slider_daylight.jpg)
+
+.header-image__content-box
+  display: block
+  position: absolute
+  width: 400px
+  left: 20%
+  top: 50%
+  transform: translateY(-60%)
+
+.header-image__content-logo
+  margin: auto
+.header-image__content-text
+  text-align: center
+  position: relative
+  font-size: 18px
+  font-weight: lighter
+  text-align: center
+  color: $text-color-white
+  text-shadow: $white-text-shadow
+  font-weight: bold
+.header-image__content-caption
+  position: relative
+  text-align: center
+  line-height: 100%
+  margin-bottom: 20px
+  color: $text-color-white
+  text-shadow: $white-text-shadow
+  font-weight: bold
+.header-image__content-figcaption
+  text-align: center
+  position: relative
+  color: $text-color-white
+  text-shadow: $white-text-shadow
+  font-weight: bold
+.header-image__logo-img
+	position: relative
+	display: block
+	width: 110px
+	margin: auto
+.header-image__btn
+  // text-shadow: 0px 1px 1px gray
+  position: relative
+  margin: 50px auto
+  width: 140px
+  // height: 44px
+  // border: 1px solid #929292
+
+.products
+  padding: 50px
+.products__img
+  width: 100%
+  // max-width: 330pxs
+  position: relative
+.products__caption
+  text-align: center
+  margin: 20px 0
+.products__btn
+  margin: 30px auto 0
+  width: 140px
+
+.separator
+  width: 14px
+  height: 2px
+  background-color: rgba(136,136,136,1)
+  margin: 12px auto 20px auto
+
+.bottles__dl
+	background-image: url(../img/Daylightbackground_2.jpg)
+	background-size: cover
+	background-position: 0 center
+
+.daypolymer__logo
+	display: block
+	margin: 0 auto
+
+.bottles__caption
+  margin: 50px 0
+  text-align: center
+.image__wrapper
+  // width: 100%
+.bottles__image
+  display: block
+  // width: 60%
+  max-width: 75%
+  margin: 0 auto
+
+.bottles__uv
+	background-image: url(../img/UVbackground.jpg)
+	background-size: cover
+	background-position: 0 center
+
+
+.footnote
+	font-size: 12px
+	font-style: italic
+	font-family: verdana
+	letter-spacing: 1px
+	font-weight: lighter
+
+@import sprites
+@import footer
+
+// PRODUCTS STYLES
+
+.purchase
+	margin: 20px 0
+	h3
+		text-transform: uppercase
+	p
+		font-size: 14px
+		color: $text-color
+
+	.purchase__price
+		font-weight: bold
+		font-size: 18px
+		color: $caption-color
+
+	.btn
+		margin-top: 10px
+		margin-bottom: 20px
+
+.product
+  padding: 50px 0
+  .text
+    margin: 30px 0
+.product__image
+  // opacity: 0
+  width: 100%
+  max-width: 600px
+  float: right
+.product__btn
+  width: 140px
+
+// comparison
+.comparison
+	table
+		width: 100%
+		margin-bottom: 30px
+	caption
+		@extend .caption
+		text-align: center
+		padding: 30px 0
+		border-top: 1px solid
+		border-bottom: 1px solid
+		border-color: #e8e8e8
+	td
+		padding: 10px 5px
+		color: $text-color
+		font-size: 14px
+		line-height: 1.8em
+	.table__firstrow
+		text-transform: uppercase
+	tr
+		td:first-child
+			font-weight: bold
+
+// raiting stars
+.fa-star
+  font-size: 20px
+  margin-right: 10px
+  color: $text-color
+
+.star-lighted
+  color: #dd3333
+
+.fa-circle, .fa-circle-thin
+  font-size: 30px
+  margin-right: 5px
+  figure
+    text-align: center
+
+.specifications__caption
+  margin-bottom: 20px
+
+.color-beige
+	color: #f3ead0
+.color-green
+	color: #49b046
+.color-gray
+	color: #6c6d70
+.color-red
+	color: #c91d30
+.color-black
+	color: #211f1f
+.color-orange
+	color: #e46c17
+.color-blue
+	color: #34b2e8
+.color-pink
+	color: #f01f9b
+
+.tcon-indicator
+	transform: rotate(180deg)
+	position: fixed
+	bottom: 10px
+	right: 10px
+	path
+		color: blue
+
+@import cart
+@import notify
+@import inputform
+@import main-navmenu
+
+@media screen and (max-width: 991px)
+  @import maxwidth991

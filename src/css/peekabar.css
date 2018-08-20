@@ -1,0 +1,21 @@
+.peek-a-bar {
+	margin: 0;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-family: Raleway;
+	color: white;
+	z-index: 999999;
+}
+
+
+.bar-onClear .btn {
+	display: inline-block;
+	margin: 5px
+}
+.bar-onClear div {
+	margin: auto;
+	width: 100px
+}
