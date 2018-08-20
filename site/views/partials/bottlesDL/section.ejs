@@ -1,0 +1,72 @@
+<% products.forEach(function(product) { %>
+  <div class="container">
+    <div class="row">
+      <div class="product__wrapper">
+
+          <div class="col-md-3 col-sm-4 col-xs-12">
+            <img class="col-xs-6 col-xs-offset-3 col-sm-12 col-sm-offset-0" src="img/daylight/<%= product.mainImage %>" alt="<%= product.name %>">
+          </div>
+
+          <div class="specifications col-sm-8">
+            <article class="product__article">
+              <!-- <div class="row"> -->
+                <div class="sprite-window col-xs-2">
+                  <img class="spr <%= product.logoImage %>" src="img/materialProp.png" alt="logo <%= product.logoImage %>">
+                </div>
+                <div class="col-xs-9">
+                  <h2 class="caption m10"><%= product.name %></h2>
+                  <p class="text"><%= product.description %></p>
+                  <h3 class="caption caption-small m20">свойства</h3>
+                  <ul class="row specifications-list">
+                    <li class="text-small col-sm-2">Твердость</li>
+                    <li class="col-sm-10" data-stars-lighted="<%= product.properties.hardness %>">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </li>
+                    <li class="col-sm-12"><hr></li>
+                    <li class="text-small col-sm-2">Гибкость</li>
+                    <li class="col-sm-10" data-stars-lighted="<%= product.properties.flexibility %>">
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                    </li>
+                    <li class="col-sm-12"><hr></li>
+                    <li class="text-small col-sm-2">Цвет</li>
+                    <li class="col-sm-8">
+                      <% product.colors.forEach(function(color){
+                        if(color == "") {%>
+                          <i class="fa fa-circle-thin"></i>
+                          <% } else { %>
+                            <i class="fa fa-circle color-<%= color %>"></i>
+                            <% }} ) %>
+                            <p class="footnote m10">* All colours are not available in every type</p>
+                          </li>
+                          <li class="col-sm-2">
+                            <figure>
+                              <img src="img/daylight/waterWhasable.png" alt="water washable">
+                              <figcaption>Водостойкий</figcaption>
+                            </figure>
+                          </li>
+                        </ul>
+                      </div>
+
+              <div class="purchase col-xs-12">
+                <h4 class="purchase__price">цена</h4>
+                <p class='purchase__price'><%= product.price %> $</p>
+                <p><%= product.weight %> кг</p>
+                <button class="btn product__btn" data-id="<%= product._id %>">Купить</button>
+                <p class="footnote"><strong>Внимание: </strong><%= product.note %></p>
+              </div>
+              <!-- </div> -->
+            </article>
+          </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+<% }) %>

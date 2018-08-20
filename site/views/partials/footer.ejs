@@ -1,0 +1,48 @@
+<footer>
+        <div class="container">
+        		<div class="row">
+
+        			<div class="footer__logo col-md-4">
+       						<img src="img/imagepac3Dwhite.png" alt="photosentricLogo">
+
+        			</div>
+              <ul class="footer__menu-list col-md-4">
+       					<li><a href="#">Photocentricgroup.com</a></li>
+       					<li><a href="#">3Dprint.com.ua</a></li>
+       					<li><a href="#">Support</a></li>
+       					<li><a href="#">Contacts</a></li>
+      					<li><a href="#">Terms & Conditions</a></li>
+       				</ul>
+
+              <div class="col-md-4">
+                <div class="footer__logo footer__logo-vendor">
+                  <a class="" href="http://3dprint.com.ua">
+      							<img src="img/3DPrintLogo.png" alt="3DPrintLogo">
+       						</a>
+       						<p>Официальный дилер в Украине</p>
+                  <address class="text">
+                    <p>Киев, проспект Мира 6, оф. 103</p>
+                    <p>+38-(044)-332-93-20</p>
+                  </address>
+
+                </div>
+                <ul class="social-links">
+                <%
+                  let socialList = [
+                    {name: 'Instagram',class: "instagram", link: "#"},
+                    {name: 'Facebook',class: "facebook", link: "#"},
+                    {name: 'LinkedIn',class: "linkedin", link: "#"},
+                    {name: 'VK',class: "vk", link: "#"},
+                    {name: 'WeChat',class: "weixin", link: "#"},
+                    {name: 'Telegram',class: "telegram", link: "#"},
+                  ]
+
+                  for(var i=0; i<socialList.length; i++){%>
+                    <li class="social-links__item col-xs-2"><a class="fa fa-<%= socialList[i].class %>" href="<%= socialList[i].link %>"></a></li>
+                  <% } %>
+              </ul>
+              </div>
+
+       		</div>
+       	</div>
+</footer>

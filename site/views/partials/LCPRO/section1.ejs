@@ -1,0 +1,90 @@
+<section class="product">
+
+	<div class="container">
+
+		<h1 class="caption concept__caption"> <%= printer.exhortation %></h1>
+
+		<div class="row">
+
+			<div class="col-sm-push-4 col-sm-8 col-xs-12 js-emergeByQueue">
+					<img class="product__image animated fadeOut" src="img/LCPRO2017.png" alt="LCPRO">
+			</div>
+
+			<div class="col-sm-pull-8 col-sm-4 col-xs-12">
+				<article>
+					<h2 class="caption"><%= printer.name %></h2>
+					<hr>
+					<p class="text"> <%= printer.motivation %></p>
+				</article>
+
+				<div class="purchase">
+					<h3>цена</h3>
+					<p class='purchase__price'><%= printer.price %></p>
+					<button class="btn product__btn" data-id="<%= printer._id %>">Купить</button>
+					<p class="footnote"><strong class="strong">Note: </strong><%= printer.note %></p>
+				</div>
+			</div>
+
+		</div>
+
+		<hr>
+
+		<div class="product__advantages js-emergeByQueue">
+			<p class="text"><%= printer.description %></p>
+
+			<div class="row">
+
+				<div class="col-sm-6">
+							<figure class="">
+								<img class="col-xs-12 animated fadeOut" src="<%= printer.featureImage1 %>" alt="LC10Display"></img>
+								<figcaption class="caption-small col-xs-12 m10"><%= printer.featureTitle1 %></figcaption>
+								<p class="text"><%= printer.featureDescr1 %></p>
+							</figure>
+				</div>
+
+				<div class=" col-sm-6">
+							<figure class="">
+								<img class="col-xs-12 animated fadeOut" src="<%= printer.featureImage2 %>" alt="LC10Display"></img>
+								<figcaption class="caption-small col-xs-12 m10"><%= printer.featureTitle2 %></figcaption>
+
+								<p class="text"><%= printer.featureDescr2 %></p>
+							</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class=" col-sm-6">
+							<figure class="">
+								<img class="col-xs-12 animated fadeOut" src="<%= printer.featureImage3 %>" alt="LC10Display"></img>
+								<figcaption class="caption-small col-xs-12 m10"><%= printer.featureTitle3 %></figcaption>
+								<p class="text"><%= printer.featureDescr3 %></p>
+							</figure>
+				</div>
+				<div class=" col-sm-6">
+							<figure class="">
+								<img class="col-xs-12 animated fadeOut" src="<%= printer.featureImage4 %>" alt="LC10Display"></img>
+								<figcaption class="caption-small col-xs-12 m10"><%= printer.featureTitle4 %></figcaption>
+								<p class="text"><%= printer.featureDescr4 %></p>
+							</figure>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<figure class="">
+						<img class="col-xs-12 animated fadeOut" src="<%= printer.featureImage5 %>" alt="vatandnachine"></img>
+						<figcaption class="caption-small col-xs-12 m10"><%= printer.featureTitle5 %></figcaption>
+						<p class="text"><%= printer.featureDescr5 %></p>
+					</figure>
+				</div>
+				<div class="col-sm-6">
+					<figure class="">
+						<img class="col-xs-12 animated fadeOut" src="<%= printer.featureImage6 %>" alt="vatandnachine"></img>
+						<figcaption class="caption-small col-xs-12 m10"><%= printer.featureTitle6 %></figcaption>
+						<p class="text"><%= printer.featureDescr6 %></p>
+					</figure>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</section>
