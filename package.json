@@ -4,14 +4,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
-    "build": "webpack --display-modules"
+    "build": "webpack --display-modules",
+    "start": "node site/server"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "scripts": {
-    "start": "node site/server",
-  },
+
   "devDependencies": {
     "autoprefixer": "^9.0.2",
     "babel-core": "^6.26.3",
