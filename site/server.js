@@ -33,11 +33,11 @@ if(app.get('env') == "development") {
 
 console.log("app.get(port) = ",app.get('port'));
 
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname+'/public')));
 
-app.use('/products', express.static('public'));
+app.use('/products', express.static(path.join(__dirname+'/public')));
 
-app.use("localhost:3001/products/", express.static('public'))
+// app.use("localhost:3001/products/", express.static('public'))
 
 app.engine('ejs', engine);
 app.set('views', path.join(__dirname + '/views/'));
