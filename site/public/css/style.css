@@ -3510,6 +3510,7 @@ footer {
   .cart input {
     width: 3em;
     height: 2em;
+    line-height: 2em;
     border: none;
     -webkit-border-radius: 10px;
        -moz-border-radius: 10px;
@@ -3785,6 +3786,8 @@ button.tcon {
   top: -105px; }
 
 @media screen and (max-width: 991px) {
+  .container {
+    overflow: hidden; }
   .nav--scroll {
     display: none; }
   .nav--mob {
