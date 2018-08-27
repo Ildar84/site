@@ -46,7 +46,7 @@ All frontend content stands in 'src' folder.
    - /vendor (vendor js modules)
 - /views (ejs templates of all pages)
 
-The server built in site folder:
+The server is built in site folder:
 --------------------------------
 
   /site
