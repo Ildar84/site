@@ -2,7 +2,7 @@ Photocentric web-store
 ========================
 http://photocentric.herokuapp.com
 
-This site contains information about Photocentric group's products and has order features. There's only products section is working and Cart functionality.
+This site contains information about Photocentric group's products and has order features. **There's only products section is working and Cart functionality**.
 
 Motivation:
 -----------
